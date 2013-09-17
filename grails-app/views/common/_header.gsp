@@ -120,6 +120,9 @@
                         <li>
                             <a href="/HAN/document">Document</a>
                         </li>
+                        <li>
+                            <g:link controller="user" action="list">User Lists</g:link>
+                        </li>
                     </ul>
                 </li>
             </ul>
