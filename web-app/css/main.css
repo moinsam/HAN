@@ -2,6 +2,24 @@
     border: 1px solid black;
 }
 
+.block-a {
+    padding: 0 0 0 30px;
+}
+
+.block-b {
+    padding: 0 60px;
+}
+.padding-btm {
+    padding-bottom: 30px;
+}
+
+.table-custom {
+    margin: 0;
+}
+.table-custom td {
+    padding: 5px;
+}
+
 #footer {
     clear: both;
 }

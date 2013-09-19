@@ -33,9 +33,7 @@
     </ul>
 
     <div class="sortable row-fluid">
-
-
-
+        <g:render template="/common/toppanel" />
     </div>
 
     <div class="row-fluid sortable">
@@ -73,11 +71,6 @@
         <div class="box7 span2">
         </div>
     </div>
-
-
-</div>
-
-
 </div>
 </body>
 </html>

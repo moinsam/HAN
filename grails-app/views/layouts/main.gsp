@@ -7,7 +7,7 @@
     <title> Welcome to Health Assist Network</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="bootstrap, a fully featured, responsive, HTML5, Bootstrap admin template.">
-    <meta name="author" name="Sayed Khan" content="sayedkhan.tk">
+    <meta name="author" content="Sayed Khan" url="sayedkhan.tk">
 
     <!-- The styles -->
     %{--<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">--}%
@@ -36,7 +36,7 @@
 
     <link  href="${resource(dir: 'css', file: 'charisma-app.css')}"  rel="stylesheet">
     <link  href="${resource(dir: 'css', file: 'bootstrap.min.css')}"  rel="stylesheet">
-    <link  href="${resource(dir: 'css', file: 'bootstrap-responsive.css')}"  rel="stylesheet">
+    <link  href="${resource(dir: 'css', file: 'bootstrap-responsive.min.css')}"  rel="stylesheet">
     <link  href="${resource(dir: 'css', file: 'main.css')}"  rel="stylesheet">
 
 
@@ -45,7 +45,7 @@
     <link  href="${resource(dir: 'css', file: 'facebox.css')}"  rel="stylesheet">
     <link  href="${resource(dir: 'css', file: 'base-admin.css')}"  rel="stylesheet">
     <link  href="${resource(dir: 'css', file: 'bootstrap-responsive.min.css')}"  rel="stylesheet">
-    <link rel="shortcut icon"  href="${resource(dir: 'img',file: 'favicon.ico')}">
+    <link rel="shortcut icon"  href="${resource(dir: 'img',file: 'logo1.png')}">
 
 
 

@@ -14,17 +14,24 @@ class UserController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [userList: User.list(params), userTotal: User.count()]
+        [userList: User.list(params), userTotal: User.count(), heading: "User Lists"]
     }
 
     def create() {
-        [user: new User(params)]
+        [user: new User(params), heading: "Create User"]
     }
 
     def save() {
         def user = new User(params)
-        user.username = user.email.substring(0, user.email.indexOf('@'))
-        user.password = shiroSecurityService.encodePassword('pass');
+        def utils = new Utility();
+        def pass = utils.getAlphaNumeric(8)
+        def tempUser = user.email.substring(0, user.email.indexOf('@'))
+        def temp = tempUser;
+        while(User.findByUsername(temp)){
+            temp = tempUser + utils.getRandomNumber(2)
+        }
+        user.setUsername(temp)
+        user.password = shiroSecurityService.encodePassword(pass);
         user.fullName = user.firstName +" "+ user.lastName
 
         if (!user.save(flush: true)) {
@@ -36,7 +43,7 @@ class UserController {
         mailService.sendMail {
             to user.email
             subject "New user"
-            text "An account has been created with the user name : "+ user.username + " & password: pass"
+            text "An account has been created with the user name : "+ user.username + " & password:"+ pass
         }
 
 //        if( !user.version )

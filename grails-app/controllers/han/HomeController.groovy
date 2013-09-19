@@ -4,5 +4,6 @@ class HomeController {
 
     def index() {
         //redirect(action: "index", params: params)
+        [heading: "home"]
     }
 }
